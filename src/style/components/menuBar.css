@@ -15,7 +15,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--laranja-coral);
+    background-color: var(--laranja-escuro);
     padding: 20px;
 }
 .center{
@@ -30,19 +30,21 @@
 .center > h1{
     font-size: 40px;
     margin: 5px;
+    font-weight: 200;
 }
 .center > h2{
     font-size: 25px;
     margin: 10px;
+    font-weight: 300;
 }
 @media (max-width: 793px) {
     .center{
-        width: 50%;
+        width: 80%;
     }
     .center > h1{
         font-size: 30px;
     }
     .center > h2{
-        font-size: 18px;
+        font-size: 16px;
     }
 }

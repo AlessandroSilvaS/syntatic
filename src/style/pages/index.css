@@ -1,20 +1,80 @@
+:root {
+  --laranja-claro: #FFE0B2;
+  --laranja-medio: #FF9800;
+  --laranja-escuro: #EF6C00;
+  --laranja-queimado: #E65100;
+  --laranja-pastel: #FFD180;
+  --laranja-coral: #FF7043;
+}
+
 .container-main{
-    width: 60%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
-.container-main > .main-title{
+.container-main > .container-text-content > .main-title{
     font-size: 60px;
+    font-weight: 200;
     margin-bottom: 30px;
 }
-.container-main > .container-content{
+.container-main > .container-text-content > .container-main-Input-text{
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba( 0,0,0,0.2);
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    flex-direction: column;
 }
-.container-main > .container-content > .indexImage{
+.container-main > .container-text-content > .container-main-Input-text > .label-input-element{
+    margin: 20px;
+}
+.container-main > .container-text-content > .container-main-Input-text > .input-element{
+    margin: 20px;
+    width: 90%;
+    min-height: 2em;
+    font-size: 18px;
+}
+.container-main > .container-text-content > .container-main-Input-text > .button-to-analise{
+    width: 50%;
+    min-height: 30px;
+    margin: 20px;
+    color: white;
+    background-color: var(--laranja-escuro);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.container-main > .indexImage{
     width: 40%;
+}
+
+@media (max-width: 793px) {
+    .container-main{
+        flex-direction: column-reverse;
+    }
+    .container-main > .container-text-content > .main-title{
+        font-size: 36px;
+    }
+    .container-main > .container-text-content{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-main > .container-text-content > .container-main-Input-text{
+        width: 80%;
+    }
+    .container-main > .container-text-content > .container-main-Input-text > .label-input-element{
+        min-width: 90%;
+    }
+    .container-main > .container-text-content > .container-main-Input-text > .input-element{
+        font-size: 14px;
+    }
+    .container-main > .indexImage{
+        width: 60%;
+        margin: 0 auto;
+    }
 }
