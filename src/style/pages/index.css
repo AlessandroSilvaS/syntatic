@@ -1,0 +1,20 @@
+.container-main{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container-main > .main-title{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.container-main > .container-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.container-main > .container-content > .indexImage{
+    width: 40%;
+}

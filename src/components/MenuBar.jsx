@@ -1,4 +1,4 @@
-import '../style/pages/menuBar.css'
+import '../style/components/menuBar.css'
 
 export const MenuBar = () => {
     return(

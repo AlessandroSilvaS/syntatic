@@ -26,13 +26,14 @@
 }
 .center > h1, h2{
     color: white;
-    margin: 10px;
 }
 .center > h1{
-    font-size: 50px;
+    font-size: 40px;
+    margin: 5px;
 }
 .center > h2{
     font-size: 25px;
+    margin: 10px;
 }
 @media (max-width: 793px) {
     .center{

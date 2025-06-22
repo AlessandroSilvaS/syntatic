@@ -3,6 +3,7 @@ export const TextBox = () => {
         <>
             <div className="container-label-input">
                 <label htmlFor=""></label>
+                <input type="text" />
             </div>
         </>
     )
