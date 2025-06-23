@@ -1,10 +1,11 @@
 import { Index } from "./pages/Index"
+import { ShowAnality } from "./pages/ShowAnality"
 
 function App() {
 
   return (
     <>
-      <Index/>
+      <ShowAnality/>
     </>
   )
 }

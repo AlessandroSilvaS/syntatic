@@ -1,9 +1,13 @@
-export const TextBox = () => {
+import '../style/components/textBox.css'
+
+export const TextBox = ({labelBox, partOfText}) => {
     return(
         <>
-            <div className="container-label-input">
-                <label htmlFor=""></label>
-                <input type="text" />
+            <div className="container-text-box">
+
+                <label htmlFor="" className="labelBox">{labelBox}</label>
+                <input type="text" value={partOfText} readonly/>
+
             </div>
         </>
     )
