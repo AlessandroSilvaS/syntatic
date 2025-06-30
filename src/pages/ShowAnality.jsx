@@ -1,7 +1,19 @@
+import { useSearchParams } from 'react-router-dom';
+
 import { MenuBar } from "../components/MenuBar"
 import { TextBox } from "../components/TextBox"
 
 export const ShowAnality = () => {
+
+    const [searchParamns] = useSearchParams()
+
+    const orationString = searchParamns.get('oration')
+
+    if(orationString != null){
+        console.log(orationString)
+    }else{
+        console.log("Nem uma informação foi enviada")
+    }
 
     const completeAnalise = [
         {

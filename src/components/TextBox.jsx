@@ -6,7 +6,7 @@ export const TextBox = ({labelBox, partOfText}) => {
             <div className="container-text-box">
 
                 <label htmlFor="" className="labelBox">{labelBox}</label>
-                <input type="text" value={partOfText} readonly/>
+                <input type="text" value={partOfText} readOnly/>
 
             </div>
         </>
