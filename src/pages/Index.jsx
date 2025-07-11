@@ -13,7 +13,7 @@ export const Index = () => {
 
     //enviar a uma url
 
-    const postOration = () => {
+    const postOration = async () => {
 
         if(!inputRef.current.value){
 
@@ -21,16 +21,30 @@ export const Index = () => {
 
         }else{
 
-        navigate(`/ShowAnality?oration=${inputRef.current.value}`)
+            try {
+
+                const oration = inputRef.current.value
+
+                const response = await fetch('http://localhost:3000/api/doAnalysis.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify({oration})
+                })
+
+                const data = await response.json()
+
+                navigate(`/ShowAnality?oration=${data}`)
+                
+            } catch (error) {
+
+                console.error(`Não foi possível realizar a operação \n ${error}`)
+                
+            }
 
         }
     }
-
-    //processar os dados
-
-    //mudar a página
-
-    //exibir os dados processados 
 
     return(
         <>

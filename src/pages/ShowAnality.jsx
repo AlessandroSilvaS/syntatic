@@ -7,10 +7,10 @@ export const ShowAnality = () => {
 
     const [searchParamns] = useSearchParams()
 
-    const orationString = searchParamns.get('oration')
+    const orationObject = searchParamns.get('oration')
 
     if(orationString != null){
-        console.log(orationString)
+        console.log(orationObject)
     }else{
         console.log("Nem uma informação foi enviada")
     }
