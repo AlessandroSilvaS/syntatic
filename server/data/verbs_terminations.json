@@ -1,0 +1,30 @@
+[{
+  "verb_terminations": {
+    "regulares": [
+      {
+        "conjugation": "1ª conjugação",
+        "ending": "-ar"
+      },
+      {
+        "conjugation": "2ª conjugação",
+        "ending": "-er"
+      },
+      {
+        "conjugation": "3ª conjugação",
+        "ending": "-ir"
+      }
+    ],
+    "irregulares": [
+      {
+        "ending": "-ar"
+      },
+      {
+        "ending": "-er"
+      },
+      {
+        "ending": "-ir"
+      }
+    ]
+  }
+}
+]

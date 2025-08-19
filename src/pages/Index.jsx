@@ -1,4 +1,5 @@
 import '../style/pages/index.css'
+import '../style/responsivitie/indexR.css'
 
 import { MenuBar } from "../components/MenuBar"
 import { useRef } from 'react'
@@ -25,17 +26,21 @@ export const Index = () => {
 
                 const oration = inputRef.current.value
 
-                const response = await fetch('http://localhost:3000/api/doAnalysis.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify({oration})
-                })
+                if(!isNaN(parseInt(oration))){
 
-                const data = await response.json()
+                    const response = await fetch('http://localhost:3000/api/doAnalysis', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({oration})
+                    })
 
-                navigate(`/ShowAnality?oration=${data}`)
+                    const data = await response.json()
+
+                    navigate(`/ShowAnality?oration=${data}`)
+                    
+                }
                 
             } catch (error) {
 
@@ -54,6 +59,7 @@ export const Index = () => {
 
             <div className="container-main">
 
+
                 <div className="container-text-content">
 
                     <h1 className='main-title'>Vamos começar!</h1>
@@ -69,6 +75,7 @@ export const Index = () => {
                     </div>
 
                 </div>
+
 
                 <img src="./src/assets/indexImage.svg" className="indexImage" alt="svg-image" />
 

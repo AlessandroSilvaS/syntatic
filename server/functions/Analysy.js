@@ -1,4 +1,7 @@
 function BreakOration(stringOration){
+
+    const finallyResult = []
+
     const words = stringOration.split(" ")
 
     const Leters = words.map((value) => {
@@ -14,7 +17,10 @@ function BreakOration(stringOration){
         return objectOration
     })
 
-    return Leters
+    finallyResult.post(words)
+    finallyResult.post(Leters)
+
+    return finallyResult
 }
 
 export default BreakOration
