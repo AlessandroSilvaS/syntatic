@@ -3,7 +3,6 @@ import cors from 'cors';
 const app = express()
 
 import BreakOration from './functions/Analysy.js';
-const verbs = require('./data/verbs_terminations.json');
 
 app.use(cors())
 
@@ -11,19 +10,30 @@ app.use(express.json())
 
 app.post('/api/doAnalysis', (req, res) => {
 
-  const dataString = req.body;
+  const {oration} = req.body;
 
-  const arraysOfOrations = BreakOration(dataString)
-
-  if((arraysOfOrations)){
-
-    res.status(200).send(arraysOfOrations)
-
-  }else{
-
-    res.status(500).send("Ocorreu um erro no servidor...")
-
+  if(!oration){
+    res.status(400).send("A oração deve ser inserida para a análise...")
   }
+
+  try{
+
+    const arraysOfOrations = BreakOration(oration)
+
+    if((arraysOfOrations)){
+
+      res.status(200).json(arraysOfOrations)
+
+    }else{
+
+      res.status(500).send("Oração não encontrada...")
+
+    }
+  }catch(err){
+    res.status(500).json(`Aqui está um erro interno no servidor ${err}`)
+  }
+
+  
 
   //base de dados de verbos:
 

@@ -2,23 +2,21 @@ function BreakOration(stringOration){
 
     const finallyResult = []
 
-    const words = stringOration.split(" ")
+    const words = stringOration.split(" ") //cria um array de palavras
 
     const Leters = words.map((value) => {
 
-        const objectOration = {}
+        let ArrayLeters = []
 
-        value.split("").foreach((leter, index) => {
+        let objectOration = value.split("")
 
-            objectOration[index] = leter
-
-        })
+        ArrayLeters.push(objectOration)
 
         return objectOration
     })
 
-    finallyResult.post(words)
-    finallyResult.post(Leters)
+    finallyResult.push(words)
+    //finallyResult.post(Leters)
 
     return finallyResult
 }

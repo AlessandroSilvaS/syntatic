@@ -26,25 +26,34 @@ export const Index = () => {
 
                 const oration = inputRef.current.value
 
-                if(!isNaN(parseInt(oration))){
+                if(oration){
 
                     const response = await fetch('http://localhost:3000/api/doAnalysis', {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json'
+                            "Content-Type": "application/json"
                         },
                         body: JSON.stringify({oration})
                     })
 
                     const data = await response.json()
 
-                    navigate(`/ShowAnality?oration=${data}`)
+                    console.log(data)
+
+                    if(data){
+
+                        //navigate(`/ShowAnality?oration=${encodeURIComponent(JSON.stringify(data))}`)
+
+                        console.log(data)
+                    }else{
+                        console.log("Sem dados...")
+                    }
                     
                 }
                 
             } catch (error) {
 
-                console.error(`Não foi possível realizar a operação \n ${error}`)
+                console.error(`Não foi possível realizar a dita cuja operação ${error}`)
                 
             }
 
