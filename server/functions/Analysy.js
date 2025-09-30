@@ -2,7 +2,7 @@ function BreakOration(stringOration){
 
     const finallyResult = []
 
-    const words = stringOration.split(" ") //cria um array de palavras
+    const words = stringOration.split(" ") 
 
     const Leters = words.map((value) => {
 
