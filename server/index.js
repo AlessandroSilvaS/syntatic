@@ -1,5 +1,7 @@
 import express, { json } from 'express'
 import cors from 'cors';
+import verb_term from './data/verbs_terminations.json' assert {type: "json"}  //base de dados de verbos
+
 const app = express()
 
 import BreakOration from './functions/Analysy.js';
@@ -20,9 +22,21 @@ app.post('/api/doAnalysis', (req, res) => {
 
     const arraysOfOrations = BreakOration(oration)
 
+    const lastLeters = arraysOfOrations.map((leters) => {
+
+      if(Array.isArray(leters) == true){
+
+        
+
+      }
+
+    })
+
+    //verifica se tem verbos
+
     if((arraysOfOrations)){
 
-      res.status(200).json(arraysOfOrations)
+      res.status(200).json([arraysOfOrations])
 
     }else{
 
@@ -32,10 +46,6 @@ app.post('/api/doAnalysis', (req, res) => {
   }catch(err){
     res.status(500).json(`Aqui está um erro interno no servidor ${err}`)
   }
-
-  
-
-  //base de dados de verbos:
 
   //verifica se tem verbos
 

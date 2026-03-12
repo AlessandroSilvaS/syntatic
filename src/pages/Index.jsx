@@ -16,6 +16,8 @@ export const Index = () => {
 
     const postOration = async () => {
 
+        //Verifica e rercolhe o valor do input
+
         if(!inputRef.current.value){
 
             alert('Nem uma mensagem foi enviada')
@@ -28,6 +30,8 @@ export const Index = () => {
 
                 if(oration){
 
+                    //Envia pra processamento
+
                     const response = await fetch('http://localhost:3000/api/doAnalysis', {
                         method: 'POST',
                         headers: {
@@ -38,11 +42,9 @@ export const Index = () => {
 
                     const data = await response.json()
 
-                    console.log(data)
-
                     if(data){
 
-                        //navigate(`/ShowAnality?oration=${encodeURIComponent(JSON.stringify(data))}`)
+                        // navigate(`/ShowAnality?oration=${encodeURIComponent(JSON.stringify(data))}`)
 
                         console.log(data)
                     }else{

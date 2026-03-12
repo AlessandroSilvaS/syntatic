@@ -15,7 +15,7 @@ function BreakOration(stringOration){
         return objectOration
     })
 
-    finallyResult.push(words)
+    finallyResult.push(Leters)
     //finallyResult.post(Leters)
 
     return finallyResult

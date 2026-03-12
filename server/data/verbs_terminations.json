@@ -1,30 +1,70 @@
-[{
-  "verb_terminations": {
-    "regulares": [
-      {
-        "conjugation": "1ª conjugação",
-        "ending": "-ar"
-      },
-      {
-        "conjugation": "2ª conjugação",
-        "ending": "-er"
-      },
-      {
-        "conjugation": "3ª conjugação",
-        "ending": "-ir"
-      }
+{
+    "verb_1t": [
+      "a",
+      "e",
+      "o"
     ],
-    "irregulares": [
-      {
-        "ending": "-ar"
-      },
-      {
-        "ending": "-er"
-      },
-      {
-        "ending": "-ir"
-      }
-    ]
-  }
+    "verb_2t": [
+      "ar",
+      "er",
+      "ir",
+      "as",
+      "am",
+      "ei",
+      "ia",
+      "oi",
+      "ôs",
+      "ão",
+      "im",
+      "õe"
+    ],
+    "verb_3t": [
+      "ais",
+      "and",
+      "ado",
+      "ada",
+      "ido",
+      "ida",
+      "ões",
+      "ois"
+    ],
+    "verb_4t": [
+      "amos",
+      "endo",
+      "indo",
+      "ando",
+      "endo",
+      "indo",
+      "ados",
+      "adas",
+      "idos",
+      "idas",
+      "ares",
+      "eres",
+      "ires",
+      "aram",
+      "asse",
+      "esse",
+      "isse",
+      "irem",
+      "arem",
+      "erem"
+    ],
+    "verb_5t": [
+      "íamos",
+      "aremos",
+      "eremos",
+      "iremos",
+      "ariam",
+      "eriam",
+      "iriam"
+    ],
+    "verb_6t": [
+      "ássemos",
+      "êssemos",
+      "íssemos",
+      "aríamos",
+      "eríamos",
+      "iríamos"
+    ] 
 }
-]
